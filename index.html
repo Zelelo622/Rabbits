@@ -37,49 +37,108 @@
       </header>
 
       <main class="main">
-        <section class="data-farm">
-          <div class="container">
-            <div class="data-farm__inner">
-              <div class="data-farm__top">
-                <a href="#!" class="data-farm__top-link active-btn">Кролики</a>
-                <a href="#!" class="data-farm__top-link">Клетки</a>
-                <a href="#!" class="data-farm__top-link--add"
-                  ><img src="./img/data-farm/top/add.svg" alt=""
-                /></a>
-                <div class="data-farm__top-sort">
-                  <span>Сортировка</span>
+        <div class="container">
+          <div class="main__wrapper">
+            <section class="data-farm">
+              <div class="data-farm__inner">
+                <div class="data-farm__top">
+                  <a href="#!" class="data-farm__top-link active-btn"
+                    >Кролики</a
+                  >
+                  <a href="#!" class="data-farm__top-link">Клетки</a>
+                  <a href="#!" class="data-farm__top-link--add"
+                    ><img src="./img/data-farm/top/add.svg" alt=""
+                  /></a>
+                  <div class="data-farm__top-sort">
+                    <span>Сортировка</span>
 
-                  <div class="dropdown">
-                    <a
-                      class="dropdown-toggle"
-                      href="#"
-                      id="age-d"
-                    >
-                    <span>Выберите</span>  
-                    </a>
-                    <ul
-                      class="dropdown-menu hide"
-                    >
-                    <li class="dropdown-item"><a id="age-u" href="#">по возрасту (убыв.)</a></li>
-                      <li class="dropdown-item"><a id="age-u" href="#">по возрасту (возр.)</a></li>
-                      <li class="dropdown-item"><a id="weight-d" href="#">по весу (убыв.)</a></li>
-                      <li class="dropdown-item"><a id="weight-u" href="#">по весу (возр.)</a></li>
-                      <li class="dropdown-item"><a id="status" href="#">по статусу</a></li>
-                      <li class="dropdown-item"><a id="breed" href="#">по породе</a></li>
-                      <li class="dropdown-item"><a id="cellNumber-d" href="#">по номеру клетки (убыв.)</a></li>
-                      <li class="dropdown-item"><a id="cellNnumber-u" href="#">по номеру клетки (возр.)</a></li>
-                      <li class="dropdown-item"><a id="type" href="#">по типу</a></li>
+                    <div class="dropdown">
+                      <a class="dropdown-toggle" href="#" id="age-d">
+                        <span>Выберите</span>
+                      </a>
+                      <ul class="dropdown-menu hide">
+                        <li class="dropdown-item">
+                          <a id="age-u" href="#">по возрасту (убыв.)</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a id="age-u" href="#">по возрасту (возр.)</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a id="weight-d" href="#">по весу (убыв.)</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a id="weight-u" href="#">по весу (возр.)</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a id="status" href="#">по статусу</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a id="breed" href="#">по породе</a>
+                        </li>
+                        <li class="dropdown-item">
+                          <a id="cellNumber-d" href="#"
+                            >по номеру клетки (убыв.)</a
+                          >
+                        </li>
+                        <li class="dropdown-item">
+                          <a id="cellNnumber-u" href="#"
+                            >по номеру клетки (возр.)</a
+                          >
+                        </li>
+                        <li class="dropdown-item">
+                          <a id="type" href="#">по типу</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="data-farm__bottom"></div>
+              </div>
+            </section>
+            <section class="filters">
+              <div class="filters__inner">
+                <div class="filters__plan">
+                  <div class="filters__plan-top">
+                    <div class="filters__plan-title">Ведение плана</div>
+                    <div class="filters__plan-date">
+                      <span>Дата:</span>
+                      <input type="date" />
+                    </div>
+                  </div>
+                  <div class="filters__plan-content">
+                    <ul class="filters__plan-list">
+                      <li class="filters__plan-item">
+                        <input type="checkbox" /><span>01.01.2021</span
+                        ><span>Убой</span><span>0 из 535</span>
+                      </li>
+                      <li class="filters__plan-item">
+                        <input type="checkbox" /><span>01.01.2021</span
+                        ><span>Убой</span><span>0 из 535</span>
+                      </li>
+                      <li class="filters__plan-item">
+                        <input type="checkbox" /><span>01.01.2021</span
+                        ><span>Убой</span><span>0 из 535</span>
+                      </li>
+                      <li class="filters__plan-item">
+                        <input type="checkbox" /><span>01.01.2021</span
+                        ><span>Убой</span><span>0 из 535</span>
+                      </li>
+                      <li class="filters__plan-item">
+                        <input type="checkbox" /><span>01.01.2021</span
+                        ><span>Убой</span><span>0 из 535</span>
+                      </li>
+                      <li class="filters__plan-item">
+                        <input type="checkbox" /><span>01.01.2021</span
+                        ><span>Убой</span><span>0 из 535</span>
                       </li>
                     </ul>
                   </div>
                 </div>
               </div>
-
-              <div class="data-farm__bottom"></div>
-            </div>
+            </section>
           </div>
-        </section>
-        <section class="filters"></section>
+        </div>
       </main>
     </div>
 
