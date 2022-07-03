@@ -163,6 +163,7 @@ body {
   background-color: #6d6d6d;
   box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
+  position: relative;
 }
 
 .dropdown-toggle {
@@ -186,9 +187,16 @@ body {
 }
 
 .dropdown-menu {
+  background-color: #6d6d6d;
+  /* box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.15); */
+  border-radius: 10px;
+  min-width: 200px;
+  /* min-width: 100%; */
+  z-index: 1000;
+  position: absolute;
+  top: 50px;
+  left: 0;
   transition: all 0.5s ease-out;
-  /* max-height: auto; */
-  overflow: hidden;
 }
 
 .dropdown-item {
