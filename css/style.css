@@ -20,7 +20,8 @@ body {
   padding: 0 10px;
 }
 
-.active {
+.hide {
+  display: none;
 }
 
 /*header*/
@@ -158,7 +159,9 @@ body {
 
 .dropdown {
   margin-left: 10px;
-  position: relative;
+  background-color: #6d6d6d;
+  box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
 }
 
 .dropdown-toggle {
@@ -168,9 +171,6 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: #fff;
-  background-color: #6d6d6d;
-  box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.15);
-  border-radius: 10px;
   text-align: center;
   padding: 12px 47px;
 }
@@ -186,10 +186,18 @@ body {
 
 .dropdown-menu {
   display: none;
-  border: 1px solid #000;
-  position: absolute;
-  left: 0;
+  transition: max-height 0.5s ease-out;
+  overflow: hidden;
 }
 
 .dropdown-item {
+  margin: 6px;
+  transition: all 0.1s;
+}
+.dropdown-item:hover {
+  opacity: 0.7;
+}
+
+.dropdown-item a {
+  color: #fff;
 }
