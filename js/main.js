@@ -17,58 +17,49 @@ btnsTop.forEach((btn, index) => btn.addEventListener('click', () => {
 
 // =========DROPDOWN=========
 
-function showList() {
-    const menu = document.querySelector('.dropdown-menu');
+function toggleClass(elem, className) {
+    if (elem.className.indexOf(className) !== -1) {
+        elem.className = elem.className.replace(className, '');
+    }
+    else {
+        elem.className = elem.className.replace(/\s+/g, ' ') + className;
+    }
 
-    if (menu.style.display == 'block') {
-        menu.style.display = 'none';
-    } else {
-        menu.style.display = 'block';
+    return elem;
+}
+
+function toggleDisplay(elem) {
+    const curDisplayStyle = elem.style.display;
+
+    if (curDisplayStyle === 'none' || curDisplayStyle === '') {
+        elem.style.display = 'block';
+    }
+    else {
+        elem.style.display = 'none';
     }
 }
 
-// function toggleClass(elem, className) {
-//     if (elem.className.indexOf(className) !== -1) {
-//         elem.className = elem.className.replace(className, '');
-//     }
-//     else {
-//         elem.className = elem.className.replace(/\s+/g, ' ') + className;
-//     }
 
-//     return elem;
-// }
+function toggleMenuDisplay(e) {
+    const dropdown = e.currentTarget.parentNode;
+    const menu = dropdown.querySelector('.dropdown-menu');
 
-// function toggleDisplay(elem) {
-//     const curDisplayStyle = elem.style.display;
+    toggleClass(menu, 'hide');
+}
 
-//     if (curDisplayStyle === 'none' || curDisplayStyle === '') {
-//         elem.style.display = 'block';
-//     }
-//     else {
-//         elem.style.display = 'none';
-//     }
-// }
+function handleOptionSelected(e) {
+    const menu = document.querySelector('.dropdown-menu');
+    toggleClass(menu, 'hide');
 
+    const id = e.target.id;
+    const newValue = e.target.textContent + ' ';
+    const titleElem = document.querySelector('.dropdown-toggle');
+    titleElem.textContent = newValue;
+}
 
-// function toggleMenuDisplay(e) {
-//     const dropdown = e.currentTarget.parentNode;
-//     const menu = dropdown.querySelector('.dropdown-menu');
+const dropdownTitle = document.querySelector('.dropdown-toggle');
+const dropdownOptions = document.querySelectorAll('.dropdown-item');
 
-//     toggleClass(menu, 'hide');
-// }
-
-// function handleOptionSelected(e) {
-//     toggleClass(e.target.parentNode, 'hide');
-
-//     const id = e.target.id;
-//     const newValue = e.target.textContent + ' ';
-//     const titleElem = document.querySelector('.dropdown-toggle');
-//     titleElem.textContent = newValue;
-// }
-
-// const dropdownTitle = document.querySelector('.dropdown-toggle');
-// const dropdownOptions = document.querySelectorAll('.dropdown-item');
-
-//bind listeners to these elements
-// dropdownTitle.addEventListener('click', toggleMenuDisplay);
-// dropdownOptions.forEach(option => option.addEventListener('click', handleOptionSelected));
+// bind listeners to these elements
+dropdownTitle.addEventListener('click', toggleMenuDisplay);
+dropdownOptions.forEach(option => option.addEventListener('click', handleOptionSelected));
