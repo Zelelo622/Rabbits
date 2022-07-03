@@ -237,6 +237,7 @@ body {
 .filters__plan-top {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 14px;
 }
 
 .filters__plan-title {
@@ -246,14 +247,74 @@ body {
 
 .filters__plan-date {
   align-items: center;
-  margin-left: 139px;
+  font-weight: 700;
+  color: #fff;
 }
 
 .filters__plan-content {
+  /* max-height: 110px; */
 }
 
 .filters__plan-list {
 }
 
 .filters__plan-item {
+  min-height: 30px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #fff;
+  background: #247334;
+  box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.filters__plan-item .filters__plan-date {
+  padding-left: 40px;
+}
+.filters__plan-item + .filters__plan-item {
+  margin-top: 10px;
+}
+.filters__plan-item label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.check-highload {
+  position: absolute;
+  display: none;
+}
+
+.highload2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: #349748;
+  border-radius: 5px;
+}
+.highload2:after {
+  content: "";
+  position: absolute;
+  display: none;
+  border-radius: 5px;
+  width: 14px;
+  height: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(../img/filters/plan/checkbox.svg);
+}
+.check-highload:checked ~ .highload2 {
+  background: #6cc165;
+  box-shadow: inset 0px 4px 5px rgba(0, 0, 0, 0.25);
+}
+.check-highload:checked ~ .highload2:after {
+  display: block;
 }
