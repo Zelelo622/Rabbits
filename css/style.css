@@ -15,7 +15,7 @@ body {
 }
 
 .container {
-  max-width: 1680px;
+  max-width: 1700px;
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -119,11 +119,11 @@ body {
 
 .data-farm {
   padding-top: 30px;
-  padding-right: 120px;
+  /* padding-right: 120px; */
 }
 
 .data-farm__inner {
-  /* max-width: 1020px; */
+  max-width: 1020px;
 }
 
 .data-farm__top {
@@ -175,6 +175,7 @@ body {
 .dropdown-toggle {
   position: relative;
   white-space: nowrap;
+  /* width: 205px; */
   display: inline-block;
   font-size: 18px;
   line-height: 21px;
@@ -194,10 +195,8 @@ body {
 
 .dropdown-menu {
   background-color: #6d6d6d;
-  /* box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.15); */
   border-radius: 10px;
   min-width: 200px;
-  /* min-width: 100%; */
   z-index: 1000;
   position: absolute;
   top: 50px;
@@ -250,6 +249,34 @@ body {
   font-weight: 700;
   color: #fff;
 }
+
+/* ::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+} */
+
+/* .datepicker-toggle {
+  display: inline-block;
+  position: relative;
+  width: 14px;
+  height: 14px;
+  background: #297a2a;
+  box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+.datepicker-toggle-button {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/filters/plan/calendar.svg);
+  background-repeat: no-repeat;
+}
+.datepicker-input {
+} */
 
 .filters__plan-content {
   /* max-height: 110px; */
