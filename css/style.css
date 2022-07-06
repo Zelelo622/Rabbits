@@ -283,6 +283,20 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .filters__plan-list {
+  height: 110px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.filters__plan-list::-webkit-scrollbar {
+  width: 5px;
+}
+.filters__plan-list::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border-radius: 10px;
+}
+.filters__plan-list::-webkit-scrollbar-track {
+  background: #247334;
+  border-radius: 10px;
 }
 
 .filters__plan-item {
@@ -298,6 +312,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-right: 13px;
 }
 .filters__plan-item .filters__plan-date {
   padding-left: 40px;
