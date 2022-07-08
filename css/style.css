@@ -165,6 +165,7 @@ body {
 }
 
 .dropdown {
+  flex-basis: 205px;
   margin-left: 10px;
   background-color: #6d6d6d;
   box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.15);
@@ -175,13 +176,14 @@ body {
 .dropdown-toggle {
   position: relative;
   white-space: nowrap;
-  /* width: 205px; */
   display: inline-block;
   font-size: 18px;
   line-height: 21px;
   color: #fff;
   text-align: center;
-  padding: 12px 47px;
+  padding: 12px 30px;
+  text-align: center;
+  display: block;
 }
 .dropdown-toggle::before {
   content: "";
@@ -189,8 +191,11 @@ body {
   width: 14px;
   height: 8px;
   position: absolute;
-  top: 18px;
-  left: 10px;
+  /* top: 18px;
+  left: 10px; */
+  top: 50%;
+  left: 12px;
+  transform: translate(-50%, -50%);
 }
 
 .dropdown-menu {
@@ -223,14 +228,14 @@ body {
 }
 
 .filters__inner {
-  max-width: 540px;
+  width: 540px;
 }
 
 .filters__plan {
   background: linear-gradient(180deg, #5ab752 0%, #249f53 100%);
   border-radius: 10px;
-  width: 540px;
   padding: 18px 41px;
+  margin-bottom: 20px;
 }
 
 .filters__plan-top {
@@ -282,10 +287,6 @@ body {
   height: auto;
   opacity: 0;
   cursor: pointer;
-}
-
-.filters__plan-content {
-  /* max-height: 110px; */
 }
 
 .filters__plan-list {
@@ -365,4 +366,88 @@ body {
 }
 .check-highload:checked ~ .highload2:after {
   display: block;
+}
+
+/*settings*/
+.filters__settings {
+}
+
+.filters__settings-content {
+  padding: 20px 40px;
+  background-color: #fff;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.filters__settings-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.filters__settings-item > span {
+  font-weight: 700;
+  flex-basis: 260px;
+  padding-right: 25px;
+}
+.filters__settings-item + .filters__settings-item {
+  margin-top: 20px;
+}
+
+.dropdown-settings {
+  min-width: 260px;
+  flex-basis: 260px;
+  margin-left: 0;
+  background-color: #8a8a8a;
+}
+
+.dropdown-menu-settings {
+}
+
+.dropdown-item-settings {
+}
+
+.dropdown-toggle-settings {
+  padding: 7px 30px;
+  text-align: center;
+  display: block;
+}
+
+.filters__settings-buttons {
+  display: flex;
+}
+
+.filters__settings-btn {
+}
+
+.settings-btn {
+  border: none;
+  width: 125px;
+  padding: 8px 10px;
+  background-color: #8a8a8a;
+  box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+.settings-btn + .settings-btn {
+  margin-left: 10px;
+}
+
+.filters__settings-input::placeholder {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+  text-align: left;
+}
+
+.filters__settings-link--main {
+  display: block;
+  width: 215px;
+  text-align: center;
+  margin: 57px auto 0 auto;
+  padding: 9px 63px;
+  background: linear-gradient(180deg, #5ab752 0%, #249f53 100%);
+  border-radius: 10px;
 }
