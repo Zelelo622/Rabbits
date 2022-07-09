@@ -137,7 +137,9 @@ body {
   font-size: 22px;
   line-height: 26px;
   color: #fff;
-  padding: 22px 78px;
+  padding: 22px 10px;
+  width: 235px;
+  text-align: center;
   background: linear-gradient(180deg, #bebebe 0%, #9d9d9d 100%);
 }
 .active-btn {
@@ -370,6 +372,7 @@ body {
 
 /*settings*/
 .filters__settings {
+  margin-bottom: 30px;
 }
 
 .filters__settings-content {
@@ -452,4 +455,69 @@ body {
   border-radius: 10px;
   font-weight: 700;
   color: #ffffff;
+}
+
+/*active*/
+
+.filters__active {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filters__active-item {
+}
+
+.filters__active-btn {
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  padding: 9px 10px;
+  width: 235px;
+  height: 60px;
+  text-align: center;
+}
+
+.filters__active-item label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.check-highload {
+}
+
+.highload2--green {
+  background: #c4c4c4;
+  box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.filters__active-text {
+  padding-left: 30px;
+}
+
+.filters__active-btn--blue {
+  background: linear-gradient(180deg, #4d7ec7 0%, #3b47b3 100%);
+}
+
+.filters__active-btn--red {
+  background: linear-gradient(180deg, #c74d4d 0%, #b33b3b 100%);
+}
+
+.filters__active-date {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #222222;
+}
+.filters__active-date img {
+  padding-right: 12px;
+}
+.filters__active-date span {
 }

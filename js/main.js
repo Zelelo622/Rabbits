@@ -63,3 +63,13 @@ const dropdownOptions = document.querySelectorAll('.dropdown-item');
 // bind listeners to these elements
 dropdownTitle.addEventListener('click', toggleMenuDisplay);
 dropdownOptions.forEach(option => option.addEventListener('click', handleOptionSelected));
+
+
+// =========DATE TO SPAN=========
+
+const inputDate = document.querySelector('.datepicker-input');
+const textDateInActive = document.querySelector('#copyDate');
+
+inputDate.addEventListener('change', function () {
+    textDateInActive.textContent = " " + inputDate.value;
+});
