@@ -71,5 +71,5 @@ const inputDate = document.querySelector('.datepicker-input');
 const textDateInActive = document.querySelector('#copyDate');
 
 inputDate.addEventListener('change', function () {
-    textDateInActive.textContent = " " + inputDate.value;
+    textDateInActive.textContent = inputDate.value;
 });
