@@ -450,4 +450,6 @@ body {
   padding: 9px 63px;
   background: linear-gradient(180deg, #5ab752 0%, #249f53 100%);
   border-radius: 10px;
+  font-weight: 700;
+  color: #ffffff;
 }
