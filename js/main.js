@@ -23,6 +23,8 @@ btnsFilter.forEach((btn, index) => btn.addEventListener('click', () => {
 
 // =========DROPDOWN=========
 
+//TODO полностью переписать логику выпадающего меню
+
 function toggleClass(elem, className) {
     if (elem.className.indexOf(className) !== -1) {
         elem.className = elem.className.replace(className, '');
@@ -80,7 +82,7 @@ let getNormalDate = function () {
     let date = new Date(inputDate.value);
     if (!!date.valueOf()) {
         let day = (date.getDate() < 10 ? '0' : '') + (date.getDate());
-        let month = (date.getMonth() < 10 ? '0' : '') + (date.getMonth() + 1);
+        let month = (date.getMonth() < 9 ? '0' : '') + (date.getMonth() + 1);
         let year = date.getFullYear();
 
         return day + '.' + month + '.' + year;
