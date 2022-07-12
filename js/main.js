@@ -70,15 +70,17 @@ dropdownOptions.forEach(option => option.addEventListener('click', handleOptionS
 const inputDate = document.querySelector('.datepicker-input');
 const textDateInActive = document.querySelector('#copyDate');
 
-let date = new Date(inputDate.valueAsDate);
+let getNormalDate = function () {
+    let date = new Date(inputDate.value);
+    if (!!date.valueOf()) {
+        let day = (date.getDate() < 10 ? '0' : '') + (date.getDate());
+        let month = (date.getMonth() < 10 ? '0' : '') + (date.getMonth() + 1);
+        let year = date.getFullYear();
 
-let getNormalDate = function (date) {
-    var day = (date.getDate() < 10 ? '0' : '') + (date.getDate());
-    var month = (date.getMonth() < 10 ? '0' : '') + (date.getMonth() + 1);
-    var year = date.getFullYear();
-    return month + '.' + day + '.' + year;
+        return day + '.' + month + '.' + year;
+    }
 }
 
 inputDate.addEventListener('change', function () {
-    textDateInActive.textContent = getNormalDate(date);
+    textDateInActive.textContent = getNormalDate();
 });
