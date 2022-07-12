@@ -462,6 +462,8 @@ body {
 .filters__active {
   display: flex;
   justify-content: space-between;
+
+  padding-bottom: 100px;
 }
 
 .filters__active-item {

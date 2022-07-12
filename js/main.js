@@ -1,18 +1,24 @@
-// =========TOP BTN SELECTE=========
+// =========SWITCHING BUTTONS=========
 
-let btnsTop = document.querySelectorAll('.data-farm__top-link');
+const btnsTop = document.querySelectorAll('.data-farm__top-link');
+const btnsFilter = document.querySelectorAll('.filters__settings-btn');
 
-function hideActiveBtn() {
-    btnsTop.forEach(btn => btn.classList.remove('active-btn'));
+function hideActiveBtn(arr) {
+    arr.forEach(btn => btn.classList.remove('active-btn'));
 }
 
-function activateBtn(index) {
-    btnsTop[index].classList.add('active-btn')
+function activateBtn(index, arr) {
+    arr[index].classList.add('active-btn')
 }
 
 btnsTop.forEach((btn, index) => btn.addEventListener('click', () => {
-    hideActiveBtn();
-    activateBtn(index);
+    hideActiveBtn(btnsTop);
+    activateBtn(index, btnsTop);
+}));
+
+btnsFilter.forEach((btn, index) => btn.addEventListener('click', () => {
+    hideActiveBtn(btnsFilter);
+    activateBtn(index, btnsFilter);
 }));
 
 // =========DROPDOWN=========
