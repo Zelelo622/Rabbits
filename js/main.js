@@ -73,6 +73,29 @@ dropdownTitle.addEventListener('click', toggleMenuDisplay);
 dropdownOptions.forEach(option => option.addEventListener('click', handleOptionSelected));
 
 
+// ========VALIDATION "FROM" "TO"==========
+
+const settingsBtn = document.querySelector('.filters__settings-link--main');
+
+function compareNumInFilters() {
+    let fromAge = document.querySelector('#from-age').value;
+    let toAge = document.querySelector('#to-age').value;
+    let fromWeight = document.querySelector('#from-weight').value;
+    let toWeight = document.querySelector('#to-weight').value;
+    if (fromAge < toAge && fromWeight < toWeight) {
+        //TODO добавить логику для фильтров
+        console.log("Все верно!")
+    } else {
+        //TODO придумать как сообщить об ошибке 
+        console.log("Неверно заполнена форма!")
+    }
+}
+
+settingsBtn.addEventListener('click', () => {
+    compareNumInFilters();
+});
+
+
 // =========DATE TO SPAN=========
 
 const inputDate = document.querySelector('.datepicker-input');
