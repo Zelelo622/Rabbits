@@ -52,7 +52,7 @@ body {
   background-image: url(../img/filters/plan/checkbox.svg);
 }
 .check-highload:checked ~ .highload2 {
-  background: #6cc165;
+  background-color: #6cc165;
   box-shadow: inset 0px 4px 5px rgba(0, 0, 0, 0.25);
 }
 .check-highload:checked ~ .highload2:after {
@@ -261,6 +261,53 @@ body {
 }
 
 /*table*/
+
+.data-farm__table {
+  width: 100%;
+}
+
+.data-farm__tr-head {
+}
+
+.data-farm__tr-body {
+}
+
+.data-farm__td--first {
+}
+.data-farm__td--first label {
+  position: relative;
+}
+
+.data-farm__td--inner {
+}
+
+.data-farm__td--last {
+}
+
+.data-farm__table .check-highload {
+}
+.data-farm__table .highload2 {
+  width: 36px;
+  height: 36px;
+  background-image: url(../img/data-farm/table/checkbox-rabbit.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #6d6d6d;
+  box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+.data-farm__table .highload2::after {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background-image: url(../img/data-farm/table/checkbox-data-farm.svg);
+}
+.data-farm__table .check-highload:checked ~ .highload2 {
+  box-shadow: none;
+}
+.data-farm__td-text--bold {
+  padding-left: 70px;
+}
 
 /*filters*/
 
