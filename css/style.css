@@ -275,12 +275,17 @@ body {
 }
 
 .data-farm__th--first {
+  text-align: left;
 }
 
 .data-farm__th--innner {
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .data-farm__th--last {
+  text-align: right;
 }
 
 .data-farm__tr-body {
@@ -288,12 +293,16 @@ body {
   border-radius: 10px;
 }
 .data-farm__tr-body td {
-  padding: 17px;
+  padding-top: 17px;
+  padding-bottom: 17px;
 }
 
 .data-farm__td--first {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+  padding-left: 20px;
+  text-align: left;
+  font-weight: 700;
 }
 .data-farm__td--first label {
   position: relative;
@@ -301,11 +310,14 @@ body {
 }
 
 .data-farm__td--inner {
+  text-align: center;
 }
 
 .data-farm__td--last {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+  padding-right: 20px;
+  text-align: right;
 }
 
 .data-farm__table .check-highload {
