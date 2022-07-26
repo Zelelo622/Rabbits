@@ -115,3 +115,49 @@ let getNormalDate = function () {
 inputDate.addEventListener('change', function () {
     textDateInActive.textContent = getNormalDate();
 });
+
+// =========TABLE=========
+
+let table = document.querySelector('#table');
+
+const pageSize = 10;
+
+let rowCount = table.rows.length;
+let firstRow = table.rows[0].firstElementChild.tagName;
+let hasHead = (firstRow === 'TH');
+let tr = [];
+let i, j, m = (hasHead) ? 1 : 0; //TODO Исправить!
+let th = (hasHead ? table.rows[0].outerHTML : "");
+
+let pageCount = Math.ceil(rowCount / pageSize);
+
+if (pageCount > 1) {
+    for (i = m, j = 0; i < rowCount; i++, j++) {
+        tr[j] = table.rows[i].outerHTML;
+    }
+    table.insertAdjacentHTML("afterEnd", "<div id='btnPage'></div>");
+    sort(1);
+}
+
+function sort(page) {
+    let rows = th;
+    let fRow = ((pageSize * page) - pageSize);
+    for (i = fRow; i < (fRow + pageSize) && i < tr.length; i++) {
+        rows += tr[i];
+    }
+
+    table.innerHTML = rows;
+    document.querySelector('#btnPage').innerHTML = pageButtons(pageCount, page);
+    document.getElementById("page" + page).setAttribute("class", "activeBtnPage");
+}
+
+function pageButtons(pageCount, curPage) {
+    let prevDis = (curPage == 1) ? "disabled" : "";
+    let nextDis = (curPage == pageCount) ? "disabled" : "";
+    let btnPrev = "<input type='button' value='Предыдущая' onclick='sort(" + (curPage - 1) + ")' " + prevDis + ">";
+    for (i = 1; i <= pageCount; i++) {
+        btnPrev += "<input type='button' id='page" + i + "'value='" + i + "' onclick='sort(" + i + ")'>";
+    }
+    btnPrev += "<input type='button' value='Следующая' onclick='sort(" + (curPage + 1) + ")' " + nextDis + ">";
+    return btnPrev;
+}

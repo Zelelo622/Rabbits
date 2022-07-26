@@ -59,6 +59,10 @@ body {
   display: block;
 }
 
+/* TODO классы для кнопок переключения старниц*/
+.activeBtnPage {
+}
+
 /*header*/
 
 .header {
