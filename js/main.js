@@ -148,16 +148,17 @@ function sort(page) {
 
     table.innerHTML = rows;
     document.querySelector('#btnPage').innerHTML = pageButtons(pageCount, page);
-    document.getElementById("page" + page).setAttribute("class", "activeBtnPage");
+    // document.getElementById("page" + page).setAttribute("class", "activeBtnPage");
+    document.getElementById("page" + page).classList.add("activeBtnPage")
 }
 
 function pageButtons(pageCount, curPage) {
     let prevDis = (curPage == 1) ? "disabled" : "";
     let nextDis = (curPage == pageCount) ? "disabled" : "";
-    let btnPrev = "<input type='button' value='Предыдущая' onclick='sort(" + (curPage - 1) + ")' " + prevDis + ">";
+    let btnPrev = "<input type='button' class='btnPage-switch btnPage-switch--prev' value='Предыдущая' onclick='sort(" + (curPage - 1) + ")' " + prevDis + ">";
     for (i = 1; i <= pageCount; i++) {
-        btnPrev += "<input type='button' id='page" + i + "'value='" + i + "' onclick='sort(" + i + ")'>";
+        btnPrev += "<input type='button' class='btnPage-switch btnPage-switch--num' id='page" + i + "'value='" + i + "' onclick='sort(" + i + ")'>";
     }
-    btnPrev += "<input type='button' value='Следующая' onclick='sort(" + (curPage + 1) + ")' " + nextDis + ">";
+    btnPrev += "<input type='button' class='btnPage-switch btnPage-switch--next' value='Следующая' onclick='sort(" + (curPage + 1) + ")' " + nextDis + ">";
     return btnPrev;
 }
